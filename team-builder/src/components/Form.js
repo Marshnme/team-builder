@@ -7,7 +7,7 @@ const Form = props => {
         role:""
     }]);
     const change = e =>{
-        setNewMem({...newMem, [event.target.name]: event.target.value});
+        setNewMem({...newMem, [e.target.name]: e.target.value});
     }
 
     const Submit = e =>{
@@ -21,9 +21,9 @@ const Form = props => {
             <label htmlFor="name">Name</label>
             <input id="name" type="text" name="name" value={newMem.name} onChange={change}></input>
             <label htmlFor="email">Email</label>
-            <input id="email" type="text" name="name" value={newMem.email} onChange={change}></input>
+            <input id="email" type="text" name="email" value={newMem.email} onChange={change}></input>
             <label htmlFor="role">Role</label>
-            <input id="role" type="text" name="name" value={newMem.role} onChange={change}></input>
+            <input id="role" type="text" name="role" value={newMem.role} onChange={change}></input>
             <button type="submit">Add Member</button>
         </form>
     )
